@@ -1,0 +1,715 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #696565;
+    padding-top: 140px; 
+}
+
+
+
+
+.main_header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+.header_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.site_logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    gap: 15px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+}
+
+.site_name {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+.main_nav {
+    background-color: #34495e;
+    margin-top: 10px;
+}
+
+.nav_list {
+    display: flex;
+    list-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    justify-content: center;
+}
+
+.nav_item {
+    position: relative;
+}
+
+.nav_link {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+}
+
+.nav_link:hover {
+    background-color: #3d566e;
+}
+
+
+.has_dpordouwn .nav_link::after {
+    content: " ▼";
+    font-size: 10px;
+}
+
+.dropdown_menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 250px;
+    border: 1px solid #ddd;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+    display: none;
+    z-index: 100;
+}
+
+.has_dpordouwn:hover .dropdown_menu {
+    display: block;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 12px 20px;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.dropdown-item:hover {
+    background-color: #f5f5f5;
+    color: #2c3e50;
+}
+
+
+.main_content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.description {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+
+.description h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #000080;
+    scroll-margin-top: 150px;
+}
+
+.description p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #696565;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.block_fraud {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 45px;
+}
+
+.fraud_container {
+    max-width: 800px;
+    width: 100%;
+    padding: 45px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid blue;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    scroll-margin-top: 150px;
+}
+
+.block_fraud:hover .fraud_container {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.logo_fraud {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.fraud_container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #000080;
+}
+
+.fraud_container p {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.6;
+    color: #696565;
+}
+
+
+.additional_content {
+    text-align: center; 
+}
+
+.link-button {
+    display: inline-block; 
+    margin: 0 auto; 
+   
+}
+
+.protection_fraudsters {
+
+    scroll-margin-top: 290px;
+}
+
+
+.protection_fraudsters,
+.cyber_fraud_protection,
+.protection_common_scammers,
+.additional_content,
+.info_scammers_content {
+    max-width: 800px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #fff;
+    border: 1px solid blue;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.protection_fraudsters h2,
+.cyber_fraud_protection h2,
+.protection_common_scammers h2,
+.additional_content h2,
+.info_scammers_content h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #000080;
+    scroll-margin-top: 150px;
+}
+
+
+.protection_fraudsters_list,
+.error_telephone_scam_list,
+.cyber_fraud_protection_list,
+.users_errors,
+.protection_common_scammers_list,
+.errors_protection_common_scammers {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.protection_fraudsters_list li,
+.error_telephone_scam_list li,
+.cyber_fraud_protection_list li,
+.users_errors li,
+.protection_common_scammers_list li,
+.errors_protection_common_scammers li {
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 25px;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+
+.protection_fraudsters_list li::before,
+.cyber_fraud_protection_list li::before,
+.protection_common_scammers_list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.error_telephone_scam_list li::before,
+.users_errors li::before,
+.errors_protection_common_scammers li::before {
+    content: "✗";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    background-color: #f44336;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.list_title,
+.error_title {
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.list_title {
+    color: #008000;
+}
+
+.error_title {
+    color: #c62828;
+}
+
+.list_description,
+.error_description,
+.additional_content p,
+.info_scammers_content p {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.6;
+    color: #696565;
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+
+.link-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.link-button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+footer {
+    width: 100%;
+    height: 80px;
+    background-color: #2c3e50;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer span {
+    font-size: 18px;
+    color: white;
+    line-height: 1.5;
+    text-align: center;
+    padding: 0 20px;
+}
+
+
+
+
+.burger-menu {
+    display: none;
+}
+
+
+@media (max-width: 1024px) {
+    body {
+        padding-top: 130px;
+    }
+    
+    .header_container,
+    .nav_list {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    
+    .site_name {
+        font-size: 24px;
+    }
+    
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .nav_link {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+    
+    .description h1 {
+        font-size: 36px;
+        scroll-margin-top: 140px;
+    }
+    
+    .description p {
+        font-size: 18px;
+    }
+    
+    .main_content {
+        padding: 15px;
+    }
+    
+    .fraud_container,
+    .protection_fraudsters,
+    .cyber_fraud_protection,
+    .protection_common_scammers,
+    .additional_content,
+    .info_scammers_content {
+        max-width: 700px;
+        padding: 30px;
+    }
+    
+    .fraud_container h2,
+    .protection_fraudsters h2,
+    .cyber_fraud_protection h2,
+    .protection_common_scammers h2,
+    .additional_content h2,
+    .info_scammers_content h2 {
+        font-size: 24px;
+        scroll-margin-top: 140px;
+    }
+    
+    .fraud_container p,
+    .list_description,
+    .error_description,
+    .additional_content p,
+    .info_scammers_content p {
+        font-size: 15px;
+    }
+    
+    .list_title,
+    .error_title {
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    body {
+        padding-top: 100px;
+    }
+    
+    .header_container {
+        padding: 10px 15px;
+    }
+    
+    .site_name {
+        font-size: 20px;
+    }
+    
+    .logo {
+        width: 45px;
+        height: 45px;
+    }
+    
+    
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 22px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1001;
+    }
+    
+    .burger-menu span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+    
+    .burger-menu.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .burger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .burger-menu.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+   
+    .main_nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: #2c3e50;
+        transition: left 0.3s ease;
+        z-index: 1000;
+        padding-top: 80px;
+        overflow-y: auto;
+        margin-top: 0;
+    }
+    
+    .main_nav.active {
+        left: 0;
+    }
+    
+    .nav_list {
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    .nav_link {
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 16px;
+    }
+    
+    
+    .has_dpordouwn .nav_link::after {
+        content: " ▼";
+        float: right;
+    }
+    
+    .dropdown_menu {
+        position: static;
+        display: none;
+        width: 100%;
+        background-color: #34495e;
+        box-shadow: none;
+        border: none;
+    }
+    
+    .has_dpordouwn.active .dropdown_menu {
+        display: block;
+    }
+    
+    .dropdown-item {
+        padding: 12px 30px;
+        color: white;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 14px;
+    }
+    
+    
+    .main_content {
+        padding: 10px;
+    }
+    
+    .description h1 {
+        font-size: 28px;
+        scroll-margin-top: 110px;
+    }
+    
+    .description p {
+        font-size: 16px;
+    }
+    
+    .fraud_container,
+    .protection_fraudsters,
+    .cyber_fraud_protection,
+    .protection_common_scammers,
+    .additional_content,
+    .info_scammers_content {
+        max-width: 100%;
+        padding: 20px;
+        margin: 25px 0;
+    }
+    
+    .fraud_container h2,
+    .protection_fraudsters h2,
+    .cyber_fraud_protection h2,
+    .protection_common_scammers h2,
+    .additional_content h2,
+    .info_scammers_content h2 {
+        font-size: 22px;
+        scroll-margin-top: 110px;
+    }
+    
+    .list_title,
+    .error_title {
+        font-size: 18px;
+    }
+    
+    footer {
+        height: 70px;
+        margin-top: 30px;
+    }
+    
+    footer span {
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .site_name {
+        font-size: 18px;
+    }
+    
+    .description h1 {
+        font-size: 24px;
+    }
+    
+    .fraud_container h2,
+    .protection_fraudsters h2,
+    .cyber_fraud_protection h2,
+    .protection_common_scammers h2,
+    .additional_content h2,
+    .info_scammers_content h2 {
+        font-size: 20px;
+    }
+}
+
+
+.burger-menu {
+    display: none; 
+}
+
+@media (max-width: 767px) {
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1001;
+    }
+    
+    .burger-menu span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+    
+    
+    .burger-menu.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    
+    .burger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .burger-menu.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+    
+    
+    .main_nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: #2c3e50;
+        transition: left 0.3s ease;
+        z-index: 1000;
+        padding-top: 80px;
+        overflow-y: auto;
+    }
+    
+    .main_nav.active {
+        left: 0;
+    }
+    
+   
+    body.menu-open {
+        overflow: hidden;
+    }
+    
+   
+    .dropdown_menu {
+        display: none;
+    }
+    
+    .has_dpordouwn.active .dropdown_menu {
+        display: block;
+    }
+}
